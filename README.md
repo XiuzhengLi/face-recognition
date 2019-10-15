@@ -166,3 +166,7 @@ sudo make install
 ```sh
 sudo raspi-config
 ```
+
+```sh
+raspistill -o test.jpg -t 2000
+```
