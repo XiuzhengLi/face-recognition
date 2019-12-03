@@ -16,7 +16,9 @@
 - VideoCore VI图形，支持OpenGL ES 3.x
 - HEVC视频的4Kp60硬件解码
 
+#### 树莓派引脚图：
 
+![RaspberryPiPin](../imgs/RaspberryPiPin.png)
 
 ### 2、 Raspberry Pi Camera rev 1.3（树莓派摄像头）
 
