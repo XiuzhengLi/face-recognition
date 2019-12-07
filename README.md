@@ -1,6 +1,12 @@
-# Attendance-System
+# Face recognition
 
-#### 介绍：基于人脸识别的上课考勤系统的设计与实现
+#### 介绍：多姿态人脸识别研究
+
+### [研究背景](./doc/background.md)
+
+### [相关概念](./doc/concept.md)
+
+### [数据集](./doc/dataset.md)
 
 ### [开发环境](doc/dev_setting.md)
 

@@ -1,11 +1,5 @@
 ## 人脸识别数据集
 
-参考链接：
-
-https://zhuanlan.zhihu.com/p/54811743
-
-https://zhuanlan.zhihu.com/p/31378836
-
 ### LFW
 
 全称：Labeled Faces in the Wild
@@ -18,11 +12,21 @@ https://zhuanlan.zhihu.com/p/31378836
 
 ​		LFW数据集共有13233张人脸图像，每张图像均给出对应的人名，共有5749人，且绝大部分人仅有一张图片。每张图片的尺寸为250X250，绝大部分为彩色图像，但也存在少许黑白人脸图片。
 
+​		值得一提的是，在2015年，Google的FaceNet在LFW数据集上的平均分类精度就已经达到了99.63%，基本宣告了在LFW上性能竞赛的结束，所以现在LFW更多的是用来做人脸识别的验证和测试。
+
 数据集信息：
 
 - 13233张图像
 - 5749人
 - 1680人拥有两个或更多图像
+
+人工识别精度：
+
+
+
+部分模型识别准确率：
+
+
 
 ### PubFig
 
@@ -39,3 +43,8 @@ https://zhuanlan.zhihu.com/p/31378836
 - 58797张图像
 - 200人
 
+#### 参考链接：
+
+https://zhuanlan.zhihu.com/p/54811743
+
+https://zhuanlan.zhihu.com/p/31378836
