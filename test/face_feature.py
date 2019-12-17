@@ -1,47 +1,40 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf8 -*-
 #
 #    Copyright XiuzhengLi <xiuzhengli@qq.com>
 #
-# Development environment: Python3.7, OpenCV4.1.0
 
-from picamera.array import PiRGBArray
-from picamera import PiCamera
 import cv2
 import dlib
-import numpy
 
-# Init the camera
-camera = PiCamera()
-camera.resolution = (640, 480)
-camera.framerate = 60
-rawCapture = PiRGBArray(camera, size=(640, 480))
-fps = 0
+# Init Camera
+cap = cv2.VideoCapture(0)
 
-# load predictor
 detector =dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor('/home/pi/Python/TensorFace/openface/models/dlib/shape_predictor_68_face_landmarks.dat')
+predictor = dlib.shape_predictor('../../TensorFace/openface/models/dlib/shape_predictor_68_face_landmarks.dat')
 
-# Capture frames from the camera
-for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
+while cap.isOpened():
+    # Capture images frame by frame
+    isSuccess,frame = cap.read()
 
-    img = frame.array
-    img_grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    # Display
+    if isSuccess:
+        img = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+        # detect face
+        dets = detector(img, 1)
     
-    # detect face
-    dets = detector(img, 1)
-    
-    for k, d in enumerate(dets):
-        shape = predictor(img, d)
+        for k, d in enumerate(dets):
+            shape = predictor(img, d)
         
-        for index, pt in enumerate(shape.parts()):
-            cv2.circle(img, (pt.x, pt.y), 1, (255, 0, 0), 2)
-    
-    # Calculate and show the FPS
-    fps = fps + 1
+            for index, pt in enumerate(shape.parts()):
+                cv2.circle(frame, (pt.x, pt.y), 1, (255, 0, 0), 2)
+        cv2.imshow("frame",frame)
 
-    cv2.imshow("Frame", img)
-    cv2.waitKey(1)
+    # Press "q" to exit
+    if cv2.waitKey(1)&0xFF == ord('q'):
+        break
 
-    # Clear the stream in preparation for the next frame
-    rawCapture.truncate(0)
+# Release Camera
+cap.release()
+cv2.destoryAllWindows()

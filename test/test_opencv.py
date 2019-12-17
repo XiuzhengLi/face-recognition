@@ -1,33 +1,26 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf8 -*-
 #
 #    Copyright XiuzhengLi <xiuzhengli@qq.com>
 #
-# The simple test of opencv and camera.
-# Development environment: Python3.7, OpenCV4.1.0
 
-from picamera.array import PiRGBArray
-from picamera import PiCamera
 import cv2
 
-# Init the camera
-camera = PiCamera()
-camera.resolution = (640, 480)
-camera.framerate = 60
-rawCapture = PiRGBArray(camera, size=(640, 480))
+# Init Camera
+cap = cv2.VideoCapture(0)
 
-fps = 0
+while cap.isOpened():
+    # Capture images frame by frame
+    isSuccess,frame = cap.read()
 
-# Capture frames from the camera
-for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
+    # Display
+    if isSuccess:
+        cv2.imshow("frame",frame)
 
-    image = frame.array
+    # Press "q" to exit
+    if cv2.waitKey(1)&0xFF == ord('q'):
+        break
 
-    # Calculate and show the FPS
-    fps = fps + 1
-
-    cv2.imshow("Frame", image)
-    cv2.waitKey(1)
-
-    # Clear the stream in preparation for the next frame
-    rawCapture.truncate(0)
+# Release Camera
+cap.release()
+cv2.destoryAllWindows()
