@@ -49,7 +49,7 @@
 
 论文：[Frontal to Profile Face Verification in the Wild](../literature/Frontal to Profile Face Verification in the Wild.pdf)
 
-​        CFP数据集由500个identity的约共7000张图片组成，这个数据集的特别之处在于对于每个人，它有10张正面图像和4张侧面图像。
+​        CFP数据集由500个identity的约共7000张图片组成，这个数据集的特别之处在于对于每个人，它有10张正面图像和4张侧面图像。可以用来做生成对抗网络(GAN)的训练数据，即通过侧脸照片合成正脸照片。
 
 数据集信息：
 

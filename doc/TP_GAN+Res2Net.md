@@ -6,15 +6,21 @@ DR-GAN(CVPR 2017)
 
 [Disentangled Representation Learning GAN for Pose-Invariant Face Recognition](../literature/Disentangled Representation Learning GAN for Pose-Invariant Face Recognition.pdf)
 
+![DR-GAN](../imgs/DR-GAN.png)
+
 [DR-GAN 在 CFP数据集上的实现](https://github.com/kayamin/DR-GAN)
 
 FaceID-GAN(CVPR 2018)
 
 [FaceID-GAN: Learning a Symmetry Three-Player GAN for Identity-Preserving Face Synthesis](../literature/FaceID-GAN: Learning a Symmetry Three-Player GAN for Identity-Preserving Face Synthesis.pdf)
 
+![FaceID-GAN](../imgs/FaceID-GAN.png)
+
 TP-GAN(ICCV 2018)
 
 [Beyond Face Rotation: Global and Local Perception GAN for Photorealistic and Identity Preserving Frontal View Synthesis](../literature/Beyond Face Rotation: Global and Local Perception GAN for Photorealistic and Identity Preserving Frontal View Synthesis.pdf)
+
+![TP-GAN](../imgs/TP-GAN.png)
 
 #### 判别模型
 
@@ -22,13 +28,19 @@ ResNet(CVPR 2016)
 
 [Deep Residual Learning for Image Recognition](../literature/Deep Residual Learning for Image Recognition.pdf)
 
+![ResNet](../imgs/ResNet.png)
+
 ResNeXt(CVPR 2017)
 
 [Aggregated Residual Transformations for Deep Neural Networks](../literature/Aggregated Residual Transformations for Deep Neural Networks.pdf)
 
+![ResNeXt](../imgs/ResNeXt.png)
+
 Res2Net(2019.11)
 
 [Res2Net: A New Multi-scale Backbone Architecture](../literature/Res2Net: A New Multi-scale Backbone Architecture.pdf)
+
+![Res2NeXt](../imgs/Res2Net.png)
 
 #### 参考文献：
 
@@ -51,3 +63,4 @@ Res2Net(2019.11)
 [DR-GAN：Disentangled Representation Learning GAN for Pose-Invariant Face Recognition论文解读](https://blog.csdn.net/qq_34914551/article/details/87365119)
 
 [论文阅读： FaceID-GAN: Learning a Symmetry Three-Player GAN for Identity-Preserving Face Synthesis](https://blog.csdn.net/tobale/article/details/80841361)
+
