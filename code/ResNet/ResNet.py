@@ -6,10 +6,14 @@ import sys
 import numpy as np
 from keras.layers import Conv2D, BatchNormalization, Activation, Add
 
+# 基础配置
 import keras.backend as K
 K.set_image_data_format('channels_last')
 K.set_learning_phase(1)
 
+
+# 残差块
+# shortcut连接的隐藏层维度相同
 def identity_block(X, f, filters, stage, block):
     
     conv_name_base = 'res' + str(stage) + block + '_branch'
@@ -46,6 +50,7 @@ def identity_block(X, f, filters, stage, block):
 #     out = sess.run([A], feed_dict = {A_prev:X, K.learning_phase():0})
 #     print("out = " + str(out[0][1][1][0]))
 
+# 维度不同
 def convolutional_block(X, f, filters, stage, block, s=2):
  
     conv_name_base = 'res' + str(stage) + block + '_branch'
@@ -85,7 +90,7 @@ def convolutional_block(X, f, filters, stage, block, s=2):
 #     out = test.run([A], feed_dict={A_prev: X, K.learning_phase(): 0})
 #     print("out = " + str(out[0][1][1][0]))
 
-
+# 50层的残差网络
 def ResNet50(input_shape = (64, 64, 3), classes = 6):
  
     X_input = Input(input_shape)
