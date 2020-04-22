@@ -12,6 +12,10 @@
 
 - 几种在LFW数据集上表现较好的人脸识别方法分析。
 
+  face ++、DeepFace、FR + FCN、DeepID、FaceNet 、Baidu
+
+  pose+shape+expression augmentation、CNN-3DMM estimation
+
 #### [实现思路](doc/TP_GAN+Res2Net.md)
 
 多姿态人脸识别研究的难点主要在于：

@@ -16,7 +16,7 @@ FaceID-GAN(CVPR 2018)
 
 ![FaceID-GAN](../imgs/FaceID-GAN.png)
 
-TP-GAN(ICCV 2018)
+TP-GAN(ICCV 2017)
 
 [Beyond Face Rotation: Global and Local Perception GAN for Photorealistic and Identity Preserving Frontal View Synthesis](../literature/Beyond Face Rotation: Global and Local Perception GAN for Photorealistic and Identity Preserving Frontal View Synthesis.pdf)
 
